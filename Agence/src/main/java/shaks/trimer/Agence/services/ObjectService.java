@@ -12,8 +12,4 @@ public interface ObjectService<T> {
     T update(T t, Integer id);
     void delete(Integer id);
 
-
-
-
-
 }
