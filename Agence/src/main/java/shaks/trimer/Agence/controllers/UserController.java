@@ -14,18 +14,18 @@ public class UserController {
 
     public final UserServiceImpl userService;
     @PostMapping("/inserer")
-    public User inserUser( User user){
-        return null;
+    public User inserUser(@RequestBody User user){
+        return userService.save(user);
     }
 
     @GetMapping("/listUser")
-    public List<User> listUser(User user){
-        return null;
+    public List<User> listUser(@RequestBody User user){
+        return userService.findAll();
     }
 
     @PutMapping("/update/{id}")
     public User upadteUser(@PathVariable Integer id, @RequestBody User user){
-        return null;
+        return userService.update(user,id);
     }
     @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable Integer id){

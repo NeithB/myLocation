@@ -21,8 +21,7 @@ public class Agence {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
-    @Size(min=2,max=20, message = "Valeur comprise entre 2 et 20")
+
     @Column(length = 20)
     private String nom_agence;
 
