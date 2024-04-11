@@ -1,17 +1,19 @@
 package shaks.trimer.Agence.modeles;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NonNull;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Vehicule {
@@ -48,8 +50,8 @@ public class Vehicule {
     @JoinColumn(name = "categorie_id")
     private Categories categories;
 
-    @ManyToOne
-    @JoinColumn(name="vehicule")
+    @OneToMany
+    @JoinColumn(name="vehicule_id")
     private List<Reservation> reservationList;
 
     @Override

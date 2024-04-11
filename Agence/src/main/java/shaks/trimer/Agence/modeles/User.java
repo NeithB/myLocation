@@ -4,16 +4,14 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 import org.aspectj.bridge.IMessage;
 
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class User {
@@ -56,7 +54,7 @@ public class User {
     private Integer phone;
 
     @ManyToOne
-    @Column(name = "agence_id")
+    @JoinColumn(name = "agence_id")
     private Agence agence;
 
     @OneToMany(mappedBy = "user")

@@ -5,12 +5,14 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Agence {
@@ -25,7 +27,7 @@ public class Agence {
     private String nom_agence;
 
     @OneToMany(mappedBy = "agence")
-   private List<User> userList;
+    private List<User> userList;
 
     @OneToMany(mappedBy = "agence")
     private List<Vehicule> vehiculeList;

@@ -6,8 +6,6 @@ import shaks.trimer.Agence.modeles.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    User findByName(String name);
-    User findByUser(User user);
     User findByLoginAndMdp(String login,String mdp);
     User findByLogin(String login);
 }

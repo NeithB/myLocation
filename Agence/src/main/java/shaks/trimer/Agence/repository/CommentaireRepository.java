@@ -7,5 +7,5 @@ import shaks.trimer.Agence.modeles.User;
 
 @Repository
 public interface CommentaireRepository extends JpaRepository<Commentaire,Integer> {
-    Commentaire findByUser(User user);
+
 }

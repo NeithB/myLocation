@@ -7,6 +7,5 @@ import shaks.trimer.Agence.modeles.Vehicule;
 @Repository
 public interface VehiculeRepository extends JpaRepository<Vehicule,Integer> {
 
-    Vehicule findByName(String name);
-    Vehicule findByVehicule(Vehicule vehicule);
+
 }

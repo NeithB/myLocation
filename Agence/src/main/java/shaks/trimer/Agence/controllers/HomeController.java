@@ -10,5 +10,9 @@ import shaks.trimer.Agence.modeles.User;
 @RequestMapping("/")
 public class HomeController {
 
+    public String home(){
+        return "index";
+    }
+
 
 }
