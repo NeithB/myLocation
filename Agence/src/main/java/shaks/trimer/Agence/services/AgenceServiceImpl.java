@@ -96,6 +96,5 @@ public class AgenceServiceImpl implements ObjectService<Agence>{
     public void delete(Integer id) {
         findById(id);
         this.agenceRepository.deleteById(id);
-
     }
 }

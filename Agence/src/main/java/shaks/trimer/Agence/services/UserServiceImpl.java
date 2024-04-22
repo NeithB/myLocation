@@ -89,8 +89,6 @@ public class UserServiceImpl implements ObjectService<User>{
         // s'il trouve, il modifie puis enregistre dans la base des données
             userBD.setAdresse(userUp.getAdresse());
             userBD.setEmail(userUp.getEmail());
-            userBD.setMdp(userUp.getMdp());
-            userBD.setLogin(userUp.getLogin());
             userBD.setNom(userUp.getNom());
             userBD.setPhone(userUp.getPhone());
             userBD.setSexe(userUp.getSexe());

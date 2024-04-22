@@ -8,4 +8,5 @@ import shaks.trimer.Agence.modeles.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
     User findByLoginAndMdp(String login,String mdp);
     User findByLogin(String login);
+
 }

@@ -25,7 +25,7 @@ public class User {
 
     @Size(min = 2, max = 30, message = "Valeur du champ comprise entre 2 et 30")
     @Column(length = 30)
-    @Pattern(regexp = "^[a-z]+$", message = "Lettres miniscules")
+
     private String prenom;
 
     @Size(min = 2, max = 15)
@@ -33,7 +33,7 @@ public class User {
     private String sexe;
 
     @Column(length = 10)
-    private String role;
+    private String role="CLIENT";
 
     @Column(length = 50, unique = true)
     private String adresse;
@@ -41,7 +41,6 @@ public class User {
     @Size(min = 6, max = 8, message="Valleur du champ comprise entre 6 et 8")
     @Column(length = 8, unique = true)
     @NotNull
-    @Pattern(regexp = "^[a-z]+$", message = "Lettres miniscules")
     private String login;
 
     @Size(min = 2, max = 10, message="Valeur comprise entre 2 et 10")

@@ -20,7 +20,7 @@ public class AgenceController {
     }
 
     @GetMapping("/listAgence")
-    public List<Agence> listUser(@RequestBody Agence agence){
+    public List<Agence> listAGence(@RequestBody Agence agence){
         return agenceService.findAll();
     }
 

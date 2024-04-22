@@ -1,5 +1,6 @@
 package shaks.trimer.Agence.controllers;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import shaks.trimer.Agence.modeles.User;
@@ -7,20 +8,26 @@ import shaks.trimer.Agence.services.UserServiceImpl;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @AllArgsConstructor
-@RequestMapping("/user")
+@RequestMapping("/api/user/")
 public class UserController {
 
     public final UserServiceImpl userService;
+
     @PostMapping("/inserer")
-    public User inserUser(@RequestBody User user){
+    public User inserUser(@RequestBody User user) {
         return userService.save(user);
     }
 
-    @GetMapping("/listUser")
-    public List<User> listUser(@RequestBody User user){
+    @GetMapping("/")
+    public List<User> listUser() {
         return userService.findAll();
+    }
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Integer id){
+        return userService.findById(id);
     }
 
     @PutMapping("/update/{id}")

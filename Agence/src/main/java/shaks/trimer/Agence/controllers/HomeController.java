@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import shaks.trimer.Agence.modeles.User;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/home")
 public class HomeController {
 
     public String home(){

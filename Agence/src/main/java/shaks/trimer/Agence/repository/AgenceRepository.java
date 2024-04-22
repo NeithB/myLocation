@@ -7,4 +7,5 @@ import shaks.trimer.Agence.modeles.Agence;
 @ReadingConverter
 public interface AgenceRepository extends JpaRepository<Agence, Integer> {
 
+
 }
